@@ -10,8 +10,9 @@ from . import views
 urlpatterns = [
     path('', views.index,name='home'),
     # to load prdct page
-    path('prodct_list', views.list_products,name='list_product'),
-    path('detai_prdct', views.detail_products,name='detail_product'),
+    path('prodct_list/', views.list_products, name='list_product'),
+    path('product/<int:id>/', views.detail_product, name='detail_product'),
+   
 
 
 
